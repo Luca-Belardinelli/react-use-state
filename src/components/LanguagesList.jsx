@@ -1,3 +1,6 @@
+import Languages from "./Languages.jsx";
+
+
 const languages = [
   {
     id: 1,
@@ -30,3 +33,26 @@ const languages = [
     description: "ReactJS è una libreria JavaScript per costruire interfacce utente, in particolare applicazioni a pagina singola. Consente agli sviluppatori di creare componenti UI riutilizzabili e di gestire efficacemente lo stato dell'applicazione."
   }
 ];
+
+
+// COMPONENTE
+
+export default function languagesList() {
+
+  function renderLanguages() {
+    return languages.map(languages => {
+      return <Languages
+        key={languages.id}
+        title={languages.title}
+        description={languages.description}
+      />
+    })
+  }
+
+
+  return (
+    <div>
+      {renderLanguages()}
+    </div>
+  )
+}
