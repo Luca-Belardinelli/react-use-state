@@ -7,9 +7,9 @@ export default function languages(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div >
-            <div >
-                <button onClick={() => setIsOpen((current) => !current)}>{props.title}</button>
+        <div className='lang' >
+            <div>
+                <button className='btn' onClick={() => setIsOpen((current) => !current)}>{props.title}</button>
             </div>
             {isOpen && props.description}
         </div>
