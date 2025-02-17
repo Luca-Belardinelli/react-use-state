@@ -51,7 +51,7 @@ export default function languagesList() {
 
 
   return (
-    <div>
+    <div className="render">
       {renderLanguages()}
     </div>
   )
